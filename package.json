@@ -1,6 +1,6 @@
 {
   "name": "react-app-rewire-antd",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Load antd to your create-react-app app via react-app-rewired.",
   "license": "MIT",
   "repository": "m31271n/react-app-rewire-antd",
