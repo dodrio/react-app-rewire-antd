@@ -26,6 +26,4 @@ function createRewireAntd (options = {}) {
   }
 }
 
-const rewireAntd = createRewireAntd()
-
-module.exports = rewireAntd
+module.exports = createRewireAntd
