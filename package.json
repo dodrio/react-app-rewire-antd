@@ -1,0 +1,29 @@
+{
+  "name": "react-app-rewire-antd",
+  "version": "0.0.0",
+  "description": "Load antd to your create-react-app app via react-app-rewired.",
+  "license": "MIT",
+  "repository": "m31271n/react-app-rewire-antd",
+  "author": {
+    "name": "m31271n",
+    "email": "m31271n@gmail.com",
+    "url": "stack.m31271n.com"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test": "standard && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "standard": "^10.0.2"
+  }
+}
