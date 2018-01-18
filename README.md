@@ -6,7 +6,7 @@
 [![NPM Downloads](https://img.shields.io/npm/dm/react-app-rewire-antd.svg)](#)
 [![Travis Build Status](https://img.shields.io/travis/m31271n/react-app-rewire-antd.svg)](#)
 
-> Load antd to your create-react-app app via react-app-rewired.
+> Load antd into your create-react-app app via react-app-rewired.
 
 ## Install
 
