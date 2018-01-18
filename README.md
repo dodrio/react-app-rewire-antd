@@ -31,7 +31,7 @@ module.exports = function override(config, env) {
 ```
 
 ## API
-### rewireAntd(options)
+### rewireAntd(options, override)
 + `options`
   + type: Object
   + default value: `{}`
@@ -40,11 +40,23 @@ module.exports = function override(config, env) {
   + type: String, and should be [an valid CSS color name](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
   + default value: `rgb(97,43,189)`
 
++ `override`
+  + type: Boolean
+  + default value: `false`
+  + description: when it is `true`, this module will replace [antd's default variables](https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less) with the key-value pairs in `options`.
+
 ## How it works
 Thanks to the power of following packages:
 + `react-app-rewired`
 + `react-app-rewire-less`
 + `babel-plugin-import`
+
+And following packages:
++ [create-react-app-antd](https://github.com/ant-design/create-react-app-antd)
+
+And official ant-design docs:
++ [Customize Theme](https://ant.design/docs/react/customize-theme)
++ [Use antd with create-react-app - Advanced-Guides](https://ant.design/docs/react/use-with-create-react-app#Advanced-Guides)
 
 * * *
 

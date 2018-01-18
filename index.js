@@ -6,7 +6,7 @@ const rewireLess = require('react-app-rewire-less')
 const is = require('is')
 const isColor = require('is-color')
 
-function createRewireAntd (options = {}) {
+function createRewireAntd (options = {}, override = false) {
   assert(
     options && is.object(options),
     'options should be an object.'
@@ -19,13 +19,20 @@ function createRewireAntd (options = {}) {
     'options.theme should be a valid CSS color.'
   )
 
+  let modifyVars
+  if (override) {
+    modifyVars = options
+  } else {
+    modifyVars = { '@primary-color': options.theme }
+  }
+
   return function (config, env) {
     config = injectBabelPlugin([
       'import', { libraryName: 'antd', libraryDirectory: 'es', style: true }
     ], config)
 
     config = rewireLess.withLoaderOptions({
-      modifyVars: { '@primary-color': options.theme }
+      modifyVars
     })(config, env)
 
     return config
