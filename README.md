@@ -22,7 +22,7 @@ const rewireAntd = require('react-app-rewire-antd')
 /* config-overrides.js */
 module.exports = function override(config, env) {
   config = rewireAntd({
-    theme: '#1DA57A'
+    '@primary-color': 'rgb(97,43,189)'
   })(config, env);
   // with loaderOptions
   // config = rewireLess.withLoaderOptions(someLoaderOptions)(config, env);
@@ -31,19 +31,11 @@ module.exports = function override(config, env) {
 ```
 
 ## API
-### rewireAntd(options, override)
+### rewireAntd(options)
 + `options`
   + type: Object
   + default value: `{}`
-
-+ `options.theme`
-  + type: String, and should be [an valid CSS color name](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
-  + default value: `rgb(97,43,189)`
-
-+ `override`
-  + type: Boolean
-  + default value: `false`
-  + description: when it is `true`, this module will replace [antd's default variables](https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less) with the key-value pairs in `options`.
+  + description: replace [antd's default variables](https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less) with the key-value pairs in `options`.
 
 ## How it works
 Thanks to the power of following packages:

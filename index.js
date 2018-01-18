@@ -4,27 +4,14 @@ const assert = require('assert')
 const { injectBabelPlugin } = require('react-app-rewired')
 const rewireLess = require('react-app-rewire-less')
 const is = require('is')
-const isColor = require('is-color')
 
-function createRewireAntd (options = {}, override = false) {
+function createRewireAntd (options = {}) {
   assert(
     options && is.object(options),
     'options should be an object.'
   )
 
-  options.theme = options.theme || 'rgb(97,43,189)'
-
-  assert(
-    options.theme && is.string(options.theme) && isColor(options.theme),
-    'options.theme should be a valid CSS color.'
-  )
-
-  let modifyVars
-  if (override) {
-    modifyVars = options
-  } else {
-    modifyVars = { '@primary-color': options.theme }
-  }
+  const modifyVars = options
 
   return function (config, env) {
     config = injectBabelPlugin([
