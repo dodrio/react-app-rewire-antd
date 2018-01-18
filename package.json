@@ -21,7 +21,13 @@
   "keywords": [
     ""
   ],
-  "dependencies": {},
+  "dependencies": {
+    "babel-plugin-import": "^1.6.3",
+    "is": "^3.2.1",
+    "is-color": "^0.2.0",
+    "react-app-rewire-less": "^2.1.0",
+    "react-app-rewired": "^1.4.0"
+  },
   "devDependencies": {
     "ava": "^0.19.1",
     "standard": "^10.0.2"
