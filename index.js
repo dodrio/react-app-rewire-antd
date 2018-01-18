@@ -6,11 +6,13 @@ const rewireLess = require('react-app-rewire-less')
 const is = require('is')
 const isColor = require('is-color')
 
-function createRewireAntd (options) {
+function createRewireAntd (options = {}) {
   assert(
     options && is.object(options),
     'options should be an object.'
   )
+
+  options.theme = options.theme || 'rgb(97,43,189)'
 
   assert(
     options.theme && is.string(options.theme) && isColor(options.theme),
@@ -23,7 +25,7 @@ function createRewireAntd (options) {
     ], config)
 
     config = rewireLess.withLoaderOptions({
-      modifyVars: { '@primary-color': (options.theme || '#1DA57A') }
+      modifyVars: { '@primary-color': options.theme }
     })(config, env)
 
     return config
