@@ -26,11 +26,11 @@ module.exports = function override(config, env) {
 
   config = rewireAntd({
     '@primary-color': 'rgb(97,43,189)'
-  })(config, env);
+  })(config, env)
 
   // ...
 
-  return config;
+  return config
 }
 ```
 
