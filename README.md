@@ -16,10 +16,12 @@ $ npm install react-app-rewire-antd
 
 ## Usage
 
+First, edit `config-overrides.js`:
+
 ```js
+/* config-overrides.js */
 const rewireAntd = require('react-app-rewire-antd')
 
-/* config-overrides.js */
 module.exports = function override(config, env) {
 
   // ...
@@ -33,6 +35,27 @@ module.exports = function override(config, env) {
   return config
 }
 ```
+
+Then, use `antd` as normal module. antd's components related JS and CSS will be imported on demand:
+
+```js
+import React, { Component } from 'react';
+import { Button } from 'antd'; // only import Button related JS and CSS
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Button type="primary">Button</Button>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+That's it !
 
 ## API
 ### rewireAntd(options)
