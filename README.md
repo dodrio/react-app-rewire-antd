@@ -39,7 +39,7 @@ module.exports = function override(config, env) {
 + `options`
   + type: Object
   + default value: `{}`
-  + description: replace [antd's default variables](https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less) with the key-value pairs in `options`.
+  + description: key-value pairs in `options` will be used to replace [antd's default variables](https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less).
 
 ## How it works
 Thanks to the power of following packages:
