@@ -21,11 +21,15 @@ const rewireAntd = require('react-app-rewire-antd')
 
 /* config-overrides.js */
 module.exports = function override(config, env) {
+
+  // ...
+
   config = rewireAntd({
     '@primary-color': 'rgb(97,43,189)'
   })(config, env);
-  // with loaderOptions
-  // config = rewireLess.withLoaderOptions(someLoaderOptions)(config, env);
+
+  // ...
+
   return config;
 }
 ```
