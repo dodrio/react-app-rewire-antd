@@ -48,7 +48,7 @@ class App extends Component {
       <div>
         <Button type="primary">Button</Button>
       </div>
-    );
+    )
   }
 }
 
