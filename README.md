@@ -81,6 +81,6 @@ And official ant-design docs:
 * [Customize Theme](https://ant.design/docs/react/customize-theme)
 * [Use antd with create-react-app - Advanced-Guides](https://ant.design/docs/react/use-with-create-react-app#Advanced-Guides)
 
----
+## License
 
-<p align="center">Made with ❤ by <a href="http://stack.m31271n.com">m31271n</a></p>
+[MIT](http://stack.m31271n.com/licenses/MIT.txt) © [m31271n](http://stack.m31271n.com)
